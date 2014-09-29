@@ -22,7 +22,7 @@ jQuery.fn.gbDrawer = function() {
 	    if (mutations[0].target.id == 'drawer' && mutations[0].attributeName == 'drawer') {
 	    	if (drawer.hasClass('gbopen')) {
 	    		drawer.animate({
-	    			width: 0px;
+	    			width: 0;
 	    		},100)
 				drawer.removeClass('gbopen');
 				drawer.addClass('gbclosed');
@@ -31,7 +31,7 @@ jQuery.fn.gbDrawer = function() {
 				})
 			} else {
 				drawer.animate({
-					width: 300px;
+					width: 300;
 				},100)
 				drawer.removeClass('gbclosed');
 				drawer.addClass('gbopen');
