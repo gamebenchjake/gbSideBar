@@ -1,6 +1,7 @@
 jQuery.fn.gbDrawer = function(open) {
 	var drawer = jQuery(this);
 	var content = jQuery(this).siblings();
+	console.log(drawer.offsetTop);
 	drawer.css('height', $(document).height() - drawer.offsetTop - 0);
 	if (typeof open != 'undefined') {
 	} else {
