@@ -1,1 +1,0 @@
-"use strict";!function(a,b){"function"==typeof define&&define.amd?define(["jquery"],b):a.SideNav=b($)}(this,function(){var a=function(){};return a});

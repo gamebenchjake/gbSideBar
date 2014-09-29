@@ -21,12 +21,18 @@ jQuery.fn.gbDrawer = function() {
 	    // fired when a mutation occurs
 	    if (mutations[0].target.id == 'drawer' && mutations[0].attributeName == 'drawer') {
 	    	if (drawer.hasClass('gbopen')) {
+	    		drawer.animate({
+	    			width: 0px;
+	    		},100)
 				drawer.removeClass('gbopen');
 				drawer.addClass('gbclosed');
 				content.each(function () {
 					$(this).removeClass('gbcontent');
 				})
 			} else {
+				drawer.animate({
+					width: 300px;
+				},100)
 				drawer.removeClass('gbclosed');
 				drawer.addClass('gbopen');
 				content.each(function () {
