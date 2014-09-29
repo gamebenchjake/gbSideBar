@@ -24,22 +24,26 @@ jQuery.fn.gbDrawer = function() {
 	    		drawer.animate({
 	    			width: "0px"
 	    		},100)
-				content.each(function () {
-					$(this).animate({
-						margin: "0px 0px 0px 0px"
-					},100);
-				})
+	    		if ($(window).width() > 600) {
+					content.each(function () {
+						$(this).animate({
+							margin: "0px 0px 0px 0px"
+						},100);
+					})
+				}
 				drawer.removeClass('gbopen');
 				drawer.addClass('gbclosed');
 			} else {
 				drawer.animate({
 					width: "300px"
 				},100)
-				content.each(function () {
-					$(this).animate({
-						margin: "0px 0px 0px 300px"
-					},100);
-				})
+				if ($(window).width() > 600) {
+					content.each(function () {
+						$(this).animate({
+							margin: "0px 0px 0px 300px"
+						},100);
+					})
+				}
 				drawer.removeClass('gbclosed');
 				drawer.addClass('gbopen');
 			}
