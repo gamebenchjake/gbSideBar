@@ -1,0 +1,22 @@
+{
+  "name": "gbsidebar",
+  "version": "0.0.1",
+  "author": "Jake Daynes",
+  "description": "GameBench gbsidebar.",
+  "main": "dist/gbsidebar.js",
+  "license": "MIT",
+  "keywords": [
+    "GB",
+    "gbsidebar"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "authors": [
+    "jdaynes <jdaynes@bitbucket.org>"
+  ]
+}
