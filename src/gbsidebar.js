@@ -21,9 +21,15 @@ jQuery.fn.gbDrawer = function() {
 	    // fired when a mutation occurs
 	    if (mutations[0].target.id == 'drawer' && mutations[0].attributeName == 'drawer') {
 	    	if (drawer.hasClass('gbopen')) {
-	    		drawer.animate({
-	    			width: "0px"
-	    		},100)
+	    		if ($(window).width() > 600) {
+					drawer.animate({
+						width: "0px"
+					},100)
+				} else {
+					drawer.animate({
+						width: "0px"
+					},250)
+				}
 	    		if ($(window).width() > 600) {
 					content.each(function () {
 						$(this).animate({
@@ -34,9 +40,15 @@ jQuery.fn.gbDrawer = function() {
 				drawer.removeClass('gbopen');
 				drawer.addClass('gbclosed');
 			} else {
-				drawer.animate({
-					width: "300px"
-				},100)
+				if ($(window).width() > 600) {
+					drawer.animate({
+						width: "300px"
+					},100)
+				} else {
+					drawer.animate({
+						width: "300px"
+					},250)
+				}
 				if ($(window).width() > 600) {
 					content.each(function () {
 						$(this).animate({
