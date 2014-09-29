@@ -3,7 +3,7 @@ jQuery.fn.gbDrawer = function(open) {
 	var content = jQuery(this).siblings();
 	console.log(drawer);
 	console.log(drawer[0].offsetTop);
-	drawer.css('height', drawer.parent().height());
+	drawer.css('height', drawer.parent().height() - drawer.offset().top);
 	if (typeof open != 'undefined') {
 	} else {
 		var open = false;
