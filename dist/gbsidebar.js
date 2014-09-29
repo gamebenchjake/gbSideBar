@@ -1,9 +1,25 @@
-jQuery.fn.gbDrawer = function() {
+jQuery.fn.gbDrawer = function(open) {
 	var drawer = jQuery(this);
 	var content = jQuery(this).siblings();
+	if (typeof open != 'undefined') {
+	} else {
+		var open = false;
+	}
+	if (open) {
+		drawer.attr('drawer', "1");
+		drawer.addClass('gbopen');
+		drawer.attr('style', 'width: 300px;');
+		if ($(window).width() > 600) {
+			content.each(function() {
+				$(this).attr('style', 'margin-left: 300px;');
+			})
+		}
+	} else {
+		drawer.attr('drawer', "0");
+		drawer.addClass('gbclosed');
+	}
 
-	drawer.attr('drawer', "0");
-	drawer.addClass('gbclosed');
+	
 
 	var toggle = jQuery('[toggle="'+drawer.attr('id')+'"]');
 	toggle.on('click', function() {
