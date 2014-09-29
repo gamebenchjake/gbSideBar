@@ -26,7 +26,7 @@ jQuery.fn.gbDrawer = function() {
 	    		},100)
 				content.each(function () {
 					$(this).animate({
-						margin-left: "0px"
+						margin: "0px 0px 0px 0px"
 					},100);
 				})
 				drawer.removeClass('gbopen');
@@ -37,7 +37,7 @@ jQuery.fn.gbDrawer = function() {
 				},100)
 				content.each(function () {
 					$(this).animate({
-						margin-left: "300px"
+						margin: "0px 0px 0px 300px"
 					},100);
 				})
 				drawer.removeClass('gbclosed');
