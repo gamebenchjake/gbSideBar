@@ -52,14 +52,14 @@ jQuery.fn.gbDrawer = function(option, value) {
 	    		if (style == 1) {
 		    		gbCloseShrink(drawer, content);
 		    	} else {
-		    		gbOpenSlide(drawer, content);
+		    		gbCloseSlide(drawer, content);
 		    	}
 			} else {
 				//open drawer
 				if (style == 1) {
 					gbOpenShrink(drawer, content);
 				} else {
-					gbCloseSlide(drawer, content);
+					gbOpenSlide(drawer, content);
 				}
 			}
 	    }
