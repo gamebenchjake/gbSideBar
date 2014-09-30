@@ -18,7 +18,9 @@ jQuery.fn.gbDrawer = function(option, value) {
 	//define variables
 	var drawer = jQuery(this);
 	var content = jQuery(this).siblings();
-
+	if (open == true) {
+		drawer.css('width', '300px');
+	}
 	//set starting position based on options
 	if (typeof open != 'undefined') {
 	} else {
@@ -137,13 +139,14 @@ function gbCloseShrink(drawer, content) {
 // Functions to open and close the drawer
 function gbOpenSlide(drawer, content) {
 	drawer.parent().css('overflow-x', 'hidden');
+	drawer.css('width', '300px');
 	if ($(window).width() > 600) {
 		drawer.animate({
 			left: "0px"
 		},100)
 	} else {
 		drawer.animate({
-			width: "00px"
+			left: "00px"
 		},250)
 	}
 	if ($(window).width() > 600) {
@@ -159,13 +162,14 @@ function gbOpenSlide(drawer, content) {
 
 function gbCloseSlide(drawer, content) {
 	drawer.parent().css('overflow-x', 'hidden');
+	drawer.css('width', '300px');
 	if ($(window).width() > 600) {
 		drawer.animate({
-			width: "-300px"
+			left: "-300px"
 		},100)
 	} else {
 		drawer.animate({
-			width: "-300px"
+			left: "-300px"
 		},250)
 	}
 	if ($(window).width() > 600) {
