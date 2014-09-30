@@ -19,7 +19,7 @@ jQuery.fn.gbDrawer = function(option, value) {
 	var drawer = jQuery(this);
 	var content = jQuery(this).siblings();
 	if (open == true) {
-		drawer.css('width', '300px');
+		drawer.css('width', '325px');
 	}
 	//set starting position based on options
 	if (typeof open != 'undefined') {
@@ -80,10 +80,10 @@ jQuery.fn.gbDrawer = function(option, value) {
 function gbStartOpen(drawer, content) {
 	drawer.attr('drawer', "1");
 	drawer.addClass('gbopen');
-	drawer.attr('style', 'width: 300px;');
+	drawer.attr('style', 'width: 325px;');
 	if ($(window).width() > 600) {
 		content.each(function() {
-			$(this).attr('style', 'margin-left: 300px;');
+			$(this).attr('style', 'margin-left: 325px;');
 		})
 	}
 }
@@ -97,17 +97,17 @@ function gbStartClosed(drawer, content) {
 function gbOpenShrink(drawer, content) {
 	if ($(window).width() > 600) {
 		drawer.animate({
-			width: "300px"
+			width: "325px"
 		},100)
 	} else {
 		drawer.animate({
-			width: "300px"
+			width: "325px"
 		},250)
 	}
 	if ($(window).width() > 600) {
 		content.each(function () {
 			$(this).animate({
-				margin: "0px 0px 0px 300px"
+				margin: "0px 0px 0px 325px"
 			},100);
 		})
 	}
@@ -139,7 +139,7 @@ function gbCloseShrink(drawer, content) {
 // Functions to open and close the drawer
 function gbOpenSlide(drawer, content) {
 	drawer.parent().css('overflow-x', 'hidden');
-	drawer.css('width', '300px');
+	drawer.css('width', '325px');
 	if ($(window).width() > 600) {
 		drawer.animate({
 			left: "0px"
@@ -152,7 +152,7 @@ function gbOpenSlide(drawer, content) {
 	if ($(window).width() > 600) {
 		content.each(function () {
 			$(this).animate({
-				margin: "0px 0px 0px 300px"
+				margin: "0px 0px 0px 325px"
 			},100);
 		})
 	}
@@ -162,14 +162,14 @@ function gbOpenSlide(drawer, content) {
 
 function gbCloseSlide(drawer, content) {
 	drawer.parent().css('overflow-x', 'hidden');
-	drawer.css('width', '300px');
+	drawer.css('width', '325px');
 	if ($(window).width() > 600) {
 		drawer.animate({
-			left: "-300px"
+			left: "-325px"
 		},100)
 	} else {
 		drawer.animate({
-			left: "-300px"
+			left: "-325px"
 		},250)
 	}
 	if ($(window).width() > 600) {
