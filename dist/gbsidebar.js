@@ -5,7 +5,7 @@ jQuery.fn.gbDrawer = function(option, value) {
 	//		Open - Boolean: Pass directly the boolean
 	//		Style - Enum: Shrink or slide to hide. 1 == Shrink, 2 == Slide
 	*/
-	if (option == Boolean) {
+	if (typeof option == "boolean") {
 		var open = option;
 	} else if(typeof option != 'undefined' && typeof value != 'undefined') {
 		switch(option) {
