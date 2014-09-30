@@ -8,7 +8,7 @@ jQuery.fn.gbDrawer = function(option, value) {
 	if (option == Boolean) {
 		var open = option;
 	} else if(typeof option != 'undefined' && typeof value != 'undefined') {
-		switch option {
+		switch(option) {
 			case "open":
 				var open = value;
 		}
