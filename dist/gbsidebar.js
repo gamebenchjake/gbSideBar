@@ -49,6 +49,7 @@ jQuery.fn.gbDrawer = function(option, value) {
 	    // fired when a mutation occurs
 	    // If mutation targets the drawer then:
 	    if (mutations[0].target.id == 'drawer' && mutations[0].attributeName == 'drawer') {
+	    	console.log(style);
 	    	if (drawer.hasClass('gbopen')) {
 	    		//close drawer
 	    		if (style == 1) {
@@ -125,7 +126,7 @@ function gbCloseShrink(drawer, content) {
 	}
 	if ($(window).width() > 600) {
 		content.each(function () {
-			$(this).css('margin', "0px 0px 0px 325px");
+			$(this).css('margin', "0px 0px 0px 0px");
 		})
 	}
 	drawer.removeClass('gbopen');
@@ -147,9 +148,7 @@ function gbOpenSlide(drawer, content) {
 	}
 	if ($(window).width() > 600) {
 		content.each(function () {
-			$(this).animate({
-				marginLeft: "+=325px"
-			},100);
+			$(this).css('margin', "0px 0px 0px 325px");
 		})
 	}
 	drawer.removeClass('gbclosed');
@@ -170,9 +169,7 @@ function gbCloseSlide(drawer, content) {
 	}
 	if ($(window).width() > 600) {
 		content.each(function () {
-			$(this).animate({
-				margin: "0px 0px 0px 0px"
-			},100);
+			$(this).css('margin', "0px 0px 0px 0px");
 		})
 	}
 	drawer.removeClass('gbopen');
