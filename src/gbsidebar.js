@@ -83,13 +83,16 @@ function gbStartOpen(drawer, content) {
 	drawer.addClass('gbopen');
 	drawer.attr('style', 'width: 325px;');
 	if ($(window).width() > 600) {
-		$('.gbcontent').attr('style', 'margin: 0 0 0 325px;');
+		$('.gbcontent').attr('style', "margin: 0px 0px 0px 325px;height: calc(100% - 98px); width: calc(100% - 325px);");
 	}
 }
 
 function gbStartClosed(drawer, content) {
 	drawer.attr('drawer', "0");
 	drawer.addClass('gbclosed');
+	if ($(window).width() > 600) {
+		$('.gbcontent').attr('style', "margin: 0px;left: 0px;position: absolute;width: 100%;");
+	}
 }
 
 // Functions to open and close the drawer
