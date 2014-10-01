@@ -17,7 +17,7 @@ jQuery.fn.gbDrawer = function(option, value) {
 
 	//define variables
 	var drawer = jQuery(this);
-	var content = jQuery(this).siblings();
+	var content = $('.gbcontent');
 	if (open == true) {
 		drawer.css('width', '325px');
 	}
@@ -169,6 +169,7 @@ function gbCloseSlide(drawer, content) {
 	}
 	if ($(window).width() > 600) {
 		content.each(function () {
+			console.log($(this));
 			$(this).css('margin', "0px 0px 0px 0px");
 		})
 	}
