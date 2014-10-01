@@ -148,7 +148,7 @@ function gbOpenSlide(drawer, content) {
 	}
 	if ($(window).width() > 600) {
 		content.each(function () {
-			$(this).css('margin', "0px 0px 0px 325px");
+			$(this)[0].attr('style', "margin: 0px 0px 0px 325px");
 		})
 	}
 	drawer.removeClass('gbclosed');
@@ -170,7 +170,7 @@ function gbCloseSlide(drawer, content) {
 	if ($(window).width() > 600) {
 		content.each(function () {
 			console.log($(this));
-			$(this).css('margin', "0px 0px 0px 0px");
+			$(this)[0].attr('style', "margin: 0px;left: -325px;position: absolute;width: calc(100% + 325px);");
 		})
 	}
 	drawer.removeClass('gbopen');
