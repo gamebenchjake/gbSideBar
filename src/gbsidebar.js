@@ -106,9 +106,7 @@ function gbOpenShrink(drawer, content) {
 	}
 	if ($(window).width() > 600) {
 		content.each(function () {
-			$(this).animate({
-				margin: "0px 0px 0px 325px"
-			},100);
+			$(this).css('margin', "0px 0px 0px 325px");
 		})
 	}
 	drawer.removeClass('gbclosed');
@@ -127,9 +125,7 @@ function gbCloseShrink(drawer, content) {
 	}
 	if ($(window).width() > 600) {
 		content.each(function () {
-			$(this).animate({
-				margin: "0px 0px 0px 0px"
-			},100);
+			$(this).css('margin', "0px 0px 0px 325px");
 		})
 	}
 	drawer.removeClass('gbopen');
@@ -152,7 +148,7 @@ function gbOpenSlide(drawer, content) {
 	if ($(window).width() > 600) {
 		content.each(function () {
 			$(this).animate({
-				margin: "0px 0px 0px 325px"
+				marginLeft: "+=325px"
 			},100);
 		})
 	}
