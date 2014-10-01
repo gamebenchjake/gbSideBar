@@ -83,9 +83,7 @@ function gbStartOpen(drawer, content) {
 	drawer.addClass('gbopen');
 	drawer.attr('style', 'width: 325px;');
 	if ($(window).width() > 600) {
-		content.each(function() {
-			$(this).attr('style', 'margin: 0 0 0 325px;');
-		})
+		$('.gbcontent').attr('style', 'margin: 0 0 0 325px;');
 	}
 }
 
@@ -147,7 +145,7 @@ function gbOpenSlide(drawer, content) {
 		},250)
 	}
 	if ($(window).width() > 600) {
-		content.attr('style', "margin: 0px 0px 0px 325px");
+		$('.gbcontent').attr('style', "margin: 0px 0px 0px 325px");
 		}
 	
 	drawer.removeClass('gbclosed');
@@ -167,7 +165,7 @@ function gbCloseSlide(drawer, content) {
 		},250)
 	}
 	if ($(window).width() > 600) {
-		content.attr('style', "margin: 0px;left: -325px;position: absolute;width: calc(100% + 325px);");
+		$('.gbcontent').attr('style', "margin: 0px;left: -325px;position: absolute;width: calc(100% + 325px);");
 		}
 	
 	drawer.removeClass('gbopen');
