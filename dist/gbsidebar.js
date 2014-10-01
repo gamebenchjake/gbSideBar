@@ -145,7 +145,7 @@ function gbOpenSlide(drawer, content) {
 		},250)
 	}
 	if ($(window).width() > 600) {
-		$('.gbcontent').attr('style', "margin: 0px 0px 0px 325px");
+		$('.gbcontent').attr('style', "margin: 0px 0px 0px 325px;height: calc(100% - 98px); width: calc(100% - 325px);");
 		}
 	
 	drawer.removeClass('gbclosed');
@@ -165,7 +165,7 @@ function gbCloseSlide(drawer, content) {
 		},250)
 	}
 	if ($(window).width() > 600) {
-		$('.gbcontent').attr('style', "margin: 0px;left: 0px;position: absolute;width: calc(100% + 325px);");
+		$('.gbcontent').attr('style', "margin: 0px;left: 0px;position: absolute;width: 100%;");
 		}
 	
 	drawer.removeClass('gbopen');
