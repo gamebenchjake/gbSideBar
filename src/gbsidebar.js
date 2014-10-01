@@ -141,7 +141,7 @@ function gbOpenSlide(drawer, content) {
 		},100)
 	} else {
 		drawer.animate({
-			left: "00px"
+			left: "0px"
 		},250)
 	}
 	if ($(window).width() > 600) {
@@ -165,7 +165,7 @@ function gbCloseSlide(drawer, content) {
 		},250)
 	}
 	if ($(window).width() > 600) {
-		$('.gbcontent').attr('style', "margin: 0px;left: -325px;position: absolute;width: calc(100% + 325px);");
+		$('.gbcontent').attr('style', "margin: 0px;left: 0px;position: absolute;width: calc(100% + 325px);");
 		}
 	
 	drawer.removeClass('gbopen');
