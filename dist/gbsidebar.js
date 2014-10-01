@@ -83,7 +83,7 @@ function gbStartOpen(drawer, content) {
 	drawer.attr('style', 'width: 325px;');
 	if ($(window).width() > 600) {
 		content.each(function() {
-			$(this).attr('style', 'margin-left: 325px;');
+			$(this).attr('style', 'margin: 0 0 0 325px;');
 		})
 	}
 }
