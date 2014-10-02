@@ -84,10 +84,10 @@ function gbStartOpen(drawer, content) {
 	drawer.addClass('gbopen');
 	drawer.attr('style', 'width: 325px;');
 	if ($(window).width() > 600) {
+		$('.gbcontent').css('float', 'right');
 		$('.gbcontent').animate({
 			width: pw - 325+'px',
 			height: ph - 98+'px',
-			float: 'right',
 			margin: '0px 0px 0px 0px'
 		}, 100);
 	}
@@ -100,11 +100,11 @@ function gbStartClosed(drawer, content) {
 	drawer.addClass('gbclosed');
 	if ($(window).width() > 600) {
 		$('.gbcontent').animate({
-			width: pw - 325+'px',
-			height: ph - 98+'px',
-			float: 'right',
-			margin: '0px 0px 0px 0px'
-		}, 100);
+			margin: '0px 0px 0px 0px',
+			left: '0px',
+			position: 'absolute',
+			width: '100%'
+		},100);
 	}
 }
 
