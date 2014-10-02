@@ -136,7 +136,7 @@ function gbCloseShrink(drawer, content) {
 
 // Functions to open and close the drawer
 function gbOpenSlide(drawer, content) {
-	drawer.parent().css('overflow-x', 'hidden');
+	//drawer.parent().css('overflow-x', 'hidden');
 	drawer.css('width', '325px');
 	if ($(window).width() > 600) {
 		drawer.animate({
@@ -156,7 +156,7 @@ function gbOpenSlide(drawer, content) {
 }
 
 function gbCloseSlide(drawer, content) {
-	drawer.parent().css('overflow-x', 'hidden');
+	//drawer.parent().css('overflow-x', 'hidden');
 	drawer.css('width', '325px');
 	if ($(window).width() > 600) {
 		drawer.animate({
