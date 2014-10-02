@@ -148,7 +148,7 @@ function gbOpenSlide(drawer, content) {
 		},250)
 	}
 	if ($(window).width() > 600) {
-		$('.gbcontent').attr('style', "margin: 0px 0px 0px 0px;height: calc(100% - 98px); width: 100%;");
+		$('.gbcontent').attr('style', "margin: 0px 0px 0px 0px;height: calc(100% - 98px); width: calc(100% - 325px);float: right;");
 		}
 	
 	drawer.removeClass('gbclosed');
