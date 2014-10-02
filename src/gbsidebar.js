@@ -83,7 +83,12 @@ function gbStartOpen(drawer, content) {
 	drawer.addClass('gbopen');
 	drawer.attr('style', 'width: 325px;');
 	if ($(window).width() > 600) {
-		$('.gbcontent').attr('style', "margin: 0px 0px 0px 325px;height: calc(100% - 98px); width: calc(100% - 325px);");
+		$('.gbcontent').animate({
+			width: 'calc(100% - 325px)',
+			height: 'calc(100% - 98px)',
+			float: 'right',
+			margin: '0px 0px 0px 0px'
+		}, 100);
 	}
 }
 
@@ -136,8 +141,9 @@ function gbCloseShrink(drawer, content) {
 
 // Functions to open and close the drawer
 function gbOpenSlide(drawer, content) {
+	console.log('open');
 	//drawer.parent().css('overflow-x', 'hidden');
-	drawer.css('width', '325px');
+	//drawer.css('width', '325px');
 	if ($(window).width() > 600) {
 		drawer.animate({
 			left: "0px"
@@ -148,7 +154,13 @@ function gbOpenSlide(drawer, content) {
 		},250)
 	}
 	if ($(window).width() > 600) {
-		$('.gbcontent').attr('style', "margin: 0px 0px 0px 0px;height: calc(100% - 98px); width: calc(100% - 325px);float: right;");
+		$('.gbcontent').animate({
+			width: 'calc(100% - 325px)',
+			height: 'calc(100% - 98px)',
+			float: 'right',
+			margin: '0px 0px 0px 0px'
+		}, 100);
+		//$('.gbcontent').attr('style', "margin: 0px 0px 0px 0px;height: calc(100% - 98px); width: calc(100% - 325px);float: right;");
 		}
 	
 	drawer.removeClass('gbclosed');
@@ -168,7 +180,12 @@ function gbCloseSlide(drawer, content) {
 		},250)
 	}
 	if ($(window).width() > 600) {
-		$('.gbcontent').attr('style', "margin: 0px;left: 0px;position: absolute;width: 100%;");
+		$('.gbcontent').animate({
+			margin: '0px 0px 0px 0px',
+			left: '0px',
+			position: 'absolute',
+			width: '100%'
+		},100);
 		}
 	
 	drawer.removeClass('gbopen');
