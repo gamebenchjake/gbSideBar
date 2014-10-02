@@ -49,7 +49,6 @@ jQuery.fn.gbDrawer = function(option, value) {
 	    // fired when a mutation occurs
 	    // If mutation targets the drawer then:
 	    if (mutations[0].target.id == 'drawer' && mutations[0].attributeName == 'drawer') {
-	    	console.log(style);
 	    	if (drawer.hasClass('gbopen')) {
 	    		//close drawer
 	    		if (style == 1) {
@@ -79,13 +78,15 @@ jQuery.fn.gbDrawer = function(option, value) {
 
 // Functions to Set starting position - open or closed
 function gbStartOpen(drawer, content) {
+	var pw = $('.gbcontent').parent().width();
+	var ph = $('.gbcontent').parent().height();
 	drawer.attr('drawer', "1");
 	drawer.addClass('gbopen');
 	drawer.attr('style', 'width: 325px;');
 	if ($(window).width() > 600) {
 		$('.gbcontent').animate({
-			width: 'calc(100% - 325px)',
-			height: 'calc(100% - 98px)',
+			width: pw - 325+'px',
+			height: ph - 98+'px',
 			float: 'right',
 			margin: '0px 0px 0px 0px'
 		}, 100);
@@ -93,10 +94,17 @@ function gbStartOpen(drawer, content) {
 }
 
 function gbStartClosed(drawer, content) {
+	var pw = $('.gbcontent').parent().width();
+	var ph = $('.gbcontent').parent().height();
 	drawer.attr('drawer', "0");
 	drawer.addClass('gbclosed');
 	if ($(window).width() > 600) {
-		$('.gbcontent').attr('style', "margin: 0px;left: 0px;position: absolute;width: 100%;");
+		$('.gbcontent').animate({
+			width: pw - 325+'px',
+			height: ph - 98+'px',
+			float: 'right',
+			margin: '0px 0px 0px 0px'
+		}, 100);
 	}
 }
 
@@ -141,9 +149,9 @@ function gbCloseShrink(drawer, content) {
 
 // Functions to open and close the drawer
 function gbOpenSlide(drawer, content) {
-	console.log('open');
-	//drawer.parent().css('overflow-x', 'hidden');
-	//drawer.css('width', '325px');
+	var pw = $('.gbcontent').parent().width();
+	var ph = $('.gbcontent').parent().height();
+	drawer.css('width', '325px');
 	if ($(window).width() > 600) {
 		drawer.animate({
 			left: "0px"
@@ -154,10 +162,10 @@ function gbOpenSlide(drawer, content) {
 		},250)
 	}
 	if ($(window).width() > 600) {
+		$('.gbcontent').css('float', 'right');
 		$('.gbcontent').animate({
-			width: 'calc(100% - 325px)',
-			height: 'calc(100% - 98px)',
-			float: 'right',
+			width: pw - 325+'px',
+			height: ph - 98+'px',
 			margin: '0px 0px 0px 0px'
 		}, 100);
 		//$('.gbcontent').attr('style', "margin: 0px 0px 0px 0px;height: calc(100% - 98px); width: calc(100% - 325px);float: right;");
@@ -168,7 +176,8 @@ function gbOpenSlide(drawer, content) {
 }
 
 function gbCloseSlide(drawer, content) {
-	//drawer.parent().css('overflow-x', 'hidden');
+	var ph = $('.gbcontent').parent().height();
+	var pw = $('.gbcontent').parent().width();
 	drawer.css('width', '325px');
 	if ($(window).width() > 600) {
 		drawer.animate({
