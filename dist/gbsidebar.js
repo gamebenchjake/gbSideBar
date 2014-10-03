@@ -151,7 +151,7 @@ function gbOpenSlide(drawer, content) {
 	if ($(window).width() > 600) {
 		drawer.animate({
 			left: "0px"
-		},100)
+		},{ duration: 100, queue: false })
 	} else {
 		drawer.animate({
 			left: "0px"
@@ -163,7 +163,7 @@ function gbOpenSlide(drawer, content) {
 			width: pw - 325+'px',
 			height: ph - 98+'px',
 			margin: '0px 0px 0px 0px'
-		}, 100);
+		}, { duration: 100, queue: false });
 		//$('.gbcontent').attr('style', "margin: 0px 0px 0px 0px;height: calc(100% - 98px); width: calc(100% - 325px);float: right;");
 		}
 	
@@ -178,7 +178,7 @@ function gbCloseSlide(drawer, content) {
 	if ($(window).width() > 600) {
 		drawer.animate({
 			left: "-325px"
-		},100)
+		},{ duration: 100, queue: false })
 	} else {
 		drawer.animate({
 			left: "-325px"
@@ -190,7 +190,7 @@ function gbCloseSlide(drawer, content) {
 			left: '0px',
 			position: 'absolute',
 			width: '100%'
-		},100);
+		},{ duration: 100, queue: false });
 		}
 	
 	drawer.removeClass('gbopen');
