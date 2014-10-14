@@ -172,7 +172,7 @@ function gbOpenSlide(drawer, content) {
 }
 
 function gbCloseSlide(drawer, content) {
-	$('.gbcontent').css('height', '100%');
+	$('.gbcontent').css('max-height', '100%');
 	$('.gbcontent').css('float', 'right');
 	$('.gbcontent').css('position', 'inherit');
 	var ph = $('.gbcontent').parent().height();
