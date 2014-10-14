@@ -84,8 +84,9 @@ function gbStartOpen(drawer, content) {
 	drawer.addClass('gbopen');
 	drawer.attr('style', 'width: 325px;');
 	if ($(window).width() > 600) {
-		$('.gbcontent').css('float', 'right');
+		$('.gbcontent').css('right', '0');
 		$('.gbcontent').css('width', pw - 325+'px');
+		$('.gbcontent').css('position', 'absolute');
 		$('.gbcontent').css('margin', '0px 0px 0px 0px');
 	}
 }
@@ -158,6 +159,7 @@ function gbOpenSlide(drawer, content) {
 	}
 	if ($(window).width() > 600) {
 		$('.gbcontent').css('float', 'right');
+		$('.gbcontent').css('position', 'inherit');
 		$('.gbcontent').animate({
 			width: pw - 325+'px',
 			margin: '0px 0px 0px 0px'
@@ -170,6 +172,8 @@ function gbOpenSlide(drawer, content) {
 }
 
 function gbCloseSlide(drawer, content) {
+	$('.gbcontent').css('float', 'right');
+	$('.gbcontent').css('position', 'inherit');
 	var ph = $('.gbcontent').parent().height();
 	var pw = $('.gbcontent').parent().width();
 	drawer.css('width', '325px');
