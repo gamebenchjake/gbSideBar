@@ -18,6 +18,9 @@ jQuery.fn.gbDrawer = function(option, value) {
 	//define variables
 	var drawer = jQuery(this);
 	var content = $('.gbcontent');
+	if (drawer.hasClass('gbclosed')) {
+		content.css('width', '100%');
+	}
 	if (open == true) {
 		drawer.css('width', '325px');
 	}
@@ -145,6 +148,7 @@ function gbCloseShrink(drawer, content) {
 
 // Functions to open and close the drawer
 function gbOpenSlide(drawer, content) {
+	$('.gbcontent').css('max-height', '100%');
 	var pw = $('.gbcontent').parent().width();
 	var ph = $('.gbcontent').parent().height();
 	drawer.css('width', '325px');
