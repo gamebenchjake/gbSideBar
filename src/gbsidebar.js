@@ -67,6 +67,7 @@ jQuery.fn.gbDrawer = function(option, value) {
 					gbOpenSlide(drawer, content);
 				}
 			}
+            updateCharts();
 	    }
 	});
 
@@ -202,4 +203,11 @@ function gbCloseSlide(drawer, content) {
 	
 	drawer.removeClass('gbopen');
 	drawer.addClass('gbclosed');
+}
+
+function updateCharts() {
+    $('.ui-jqchart').each(function(i,v) {
+        var chart = $(v).attr('id');
+        $('#'+chart).jqChart('update');
+    });
 }
