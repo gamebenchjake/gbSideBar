@@ -209,8 +209,12 @@ function gbCloseSlide(drawer, content) {
 }
 
 function updateCharts() {
-    $('.ui-jqchart').each(function(i,v) {
-        var chart = $(v).attr('id');
-        $('#'+chart).jqChart('update');
-    });
+    console.log("Update Charts");
+    setTimeout(function() {
+        $('.ui-jqchart').each(function(i,v) {
+            var chart = $(v).attr('id');
+            console.log(chart);
+            $('#'+chart).jqChart('update');
+        });
+    }, 350);
 }
