@@ -67,7 +67,6 @@ jQuery.fn.gbDrawer = function(option, value) {
 					gbOpenSlide(drawer, content);
 				}
 			}
-            updateCharts();
 	    }
 	});
 
@@ -126,6 +125,7 @@ function gbOpenShrink(drawer, content) {
 	}
 	drawer.removeClass('gbclosed');
 	drawer.addClass('gbopen');
+    updateCharts();
 }
 
 function gbCloseShrink(drawer, content) {
@@ -145,6 +145,7 @@ function gbCloseShrink(drawer, content) {
 	}
 	drawer.removeClass('gbopen');
 	drawer.addClass('gbclosed');
+    updateCharts();
 }
 
 // Functions to open and close the drawer
@@ -174,6 +175,7 @@ function gbOpenSlide(drawer, content) {
 	
 	drawer.removeClass('gbclosed');
 	drawer.addClass('gbopen');
+    updateCharts();
 }
 
 function gbCloseSlide(drawer, content) {
@@ -203,6 +205,7 @@ function gbCloseSlide(drawer, content) {
 	
 	drawer.removeClass('gbopen');
 	drawer.addClass('gbclosed');
+    updateCharts();
 }
 
 function updateCharts() {
